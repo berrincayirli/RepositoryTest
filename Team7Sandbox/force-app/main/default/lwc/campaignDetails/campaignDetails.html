@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Campaign Details" icon-name="standard:campaign">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-form
+                columns = "2"
+                mode = "readonly"
+                object-api-name={objectApiName}
+                record-id={recordId}
+                fields={fields}
+                >
+                <!--Mode => Possible values: view, edit, readonly....
+                    layout-type="full"  lightning-record-form için full dediğimizde dinamik olarak tüm field ları çağırmış oluyoruz, dolayısıyla form oluşturduktan sonra bir field create edilirse code düzeltme yapmadan burada görebiliriz.-->
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

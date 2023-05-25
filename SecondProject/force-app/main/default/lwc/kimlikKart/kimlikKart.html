@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Kimlik Kart">
+        <!-- avatar, first name, last name, job-->
+        <div class="slds-m-around_medium">
+            <lightning-avatar src="https://thumbs.dreamstime.com/z/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg"></lightning-avatar>
+            <lightning-input
+                type="text"
+                label="first name"
+                onchange={handleChange}>
+            </lightning-input>
+            <lightning-input
+                type="text"
+                label="last name"
+                onchange={handleChange}>
+            </lightning-input>
+            <lightning-combobox
+                label="Role"
+                value={role}
+                placeholder="Your Role"
+                options={options}
+                onchange={handleChange}>
+            </lightning-combobox>
+        </div>
+        <div class="slds-m-around_medium">
+            {firstName} {lastName} {role}
+        </div>
+    </lightning-card>
+</template>

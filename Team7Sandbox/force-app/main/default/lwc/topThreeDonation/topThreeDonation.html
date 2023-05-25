@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Top Donors" icon-name="standard:partner_fund_request">
+        <div class="slds-var-m-around_medium">
+            
+            <template for:each={donations} for:item="donation">
+                <div key={donation.Id}>
+                    <div class="slds-grid slds-gutters slds-border_bottom" 
+                        style="border-color:rgb(218, 236, 255) ">
+                        
+                        <div class="slds-col slds-size_2-of-3">
+                            &nbsp; 
+                            &nbsp;
+                            <lightning-icon 
+                                icon-name="standard:user" 
+                                alternative-text="User Icon" 
+                                size="x-small">
+                            </lightning-icon>
+                            &nbsp;
+                            {donation.Name}
+                        </div>
+
+                        <div class="slds-col slds-size_1-of-3 slds-text-align_right" style="color: cornflowerblue;">
+                            {donation.Total_Donation__c}
+                        </div>
+
+                    </div>
+                </div>
+            </template>
+
+            <template lwc:if = {errors}>
+                {errors}
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
